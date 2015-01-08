@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  root 'portfolio#index'
+  root 'projects#index'
 
-  namespace :api do
-    resources :projects
-  end
+  resources :projects, except: :show
 end

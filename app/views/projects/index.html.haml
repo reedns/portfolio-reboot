@@ -1,0 +1,15 @@
+.cards
+  - @projects.each do |project|
+    .card
+      .card-image
+        %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"}/
+      .card-header
+        project.name
+      .card-copy
+        %p= project.description
+      .card-stats
+      - project.tech_array.each do |tech|
+        %ul
+          %li
+            %span= tech
+
