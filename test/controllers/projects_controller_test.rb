@@ -59,6 +59,16 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_template :edit
     assert_equal 'Oops! Please fix the errors below.', flash[:error]
   end
+
+  test '#destroy' do
+    project = create(:project)
+
+    assert_difference('Project.count', difference = -1) do
+      delete :destroy, id: project.id
+    end
+    assert_redirected_to projects_path
+    assert_equal 'Success! Project deleted.', flash[:notice]
+  end
 end
 
 
