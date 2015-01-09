@@ -13,6 +13,7 @@ gem 'neat'
 gem 'bourbon'
 gem 'bitters'
 gem 'haml-rails'
+gem 'faker'
 
 group :development do
   gem 'spring'
@@ -22,6 +23,5 @@ group :development do
 end
 
 group :test, :development do
-  gem 'factory_girl_rails", "~> 4.0'
-  gem 'faker'
+  gem 'factory_girl_rails', '~> 4.0'
 end
