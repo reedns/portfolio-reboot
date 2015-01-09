@@ -14,4 +14,8 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
     assert assigns(:project)
   end
+
+  test '#create' do
+    post :create  project: {name: 'New', description: ''}
+  end
 end
