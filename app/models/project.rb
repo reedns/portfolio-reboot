@@ -5,3 +5,4 @@ class Project < ActiveRecord::Base
     tech.nil? ? [] : tech.split
   end
 end
+

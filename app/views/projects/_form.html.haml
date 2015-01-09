@@ -1,0 +1,5 @@
+- form_for(@project) do |f|
+  = f.text_field :name, placeholder: 'Project name'
+  = f.text_field :tech, placeholder: 'Technologies used'
+  = f.text_field :url, placeholder: 'Project URL'
+  = f.text_area :description, placeholder: 'Project description', size: '60x12'

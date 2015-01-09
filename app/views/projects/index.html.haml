@@ -4,7 +4,7 @@
       .card-image
         %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"}/
       .card-header
-        project.name
+        = project.name
       .card-copy
         %p= project.description
       .card-stats
@@ -13,3 +13,4 @@
           %li
             %span= tech
 
+= link_to "New Project", new_project_path

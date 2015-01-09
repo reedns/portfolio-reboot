@@ -1,11 +1,17 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
-  test 'should get index' do
-    project = Project.new(name: 'New', description: 'Cool',
-                          tech: 'Rails', url: 'project.com')
+  test '#index' do
+    project = Project.create!(name: 'New', description: 'Cool',
+                              tech: 'Rails', url: 'project.com')
     get :index
     assert_response :success
-    assert_not_nil assigns(:projects)
+    assert assigns(:projects)
+  end
+
+  test '#new' do
+    get :new
+    assert_response :success
+    assert assigns(:project)
   end
 end
