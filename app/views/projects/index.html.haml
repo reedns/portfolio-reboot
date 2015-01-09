@@ -8,9 +8,10 @@
       .card-copy
         %p= project.description
       .card-stats
-      - project.tech_array.each do |tech|
         %ul
-          %li
-            %span= tech
+          - project.tech_array.each do |tech|
+            %li
+              = tech
+
 
 = link_to "New Project", new_project_path
