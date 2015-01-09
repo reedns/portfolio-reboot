@@ -25,3 +25,8 @@ end
 group :test, :development do
   gem 'factory_girl_rails', '~> 4.0'
 end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+end

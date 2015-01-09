@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'projects#index'
+  root 'front_page#index'
 
   resources :projects, except: :show
 end

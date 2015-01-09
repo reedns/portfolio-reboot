@@ -6,9 +6,9 @@
     .nav
       %ul#js-navigation-menu.navigation-menu.show
         %li.nav-link
-          %a.scroll-on-page-link{:href => ""} About
+          %a.scroll-on-page-link= link_to 'About', root_path
         %li.nav-link
-          %a.scroll-on-page-link{:href => "javascript:void(0)"} Projects
+          %a.scroll-on-page-link= link_to "Projects", projects_path
         %li.nav-link
           %a.scroll-on-page-link{:href => "javascript:void(0)"} Contact
         / / %li.nav-link.more
