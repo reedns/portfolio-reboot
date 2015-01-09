@@ -3,4 +3,4 @@
   = f.text_field :tech, placeholder: 'Technologies used'
   = f.text_field :url, placeholder: 'Project URL'
   = f.text_area :description, placeholder: 'Project description', size: '60x12'
-  = f.submit 'Create Project'
+  = f.submit @project.new_record? ? 'Create Project' : 'Update Project'
