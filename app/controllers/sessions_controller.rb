@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
     #require 'pry'; binding.pry
     if admin && admin.authenticate(params[:password])
       session[:admin_id] = admin.id
-      redirect_to root_path, notice: 'Success! You are signed in.'
+      redirect_to root_path, flash.now[:notice 'Success! You are signed in.'
     else
-      flash[:error] = 'Oops! Please fix the errors below.'
+      flash.now[:error] = 'Oops! Please fix the errors below.'
       render :new
     end
   end
