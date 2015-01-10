@@ -14,16 +14,19 @@ gem 'bourbon'
 gem 'bitters'
 gem 'haml-rails'
 gem 'faker'
+gem 'bcrypt', '~> 3.1.7'
 
 group :development do
   gem 'spring'
   gem 'thin'
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
 end
 
 group :test, :development do
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'pry'
 end
 
 group :test do

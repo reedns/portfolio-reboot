@@ -1,0 +1,6 @@
+%h3 Sign In
+
+= form_tag('/sign_in', method: 'post') do
+  = text_field_tag :username, params[:username] || '', placeholder: 'Username'
+  = password_field_tag :password, params[:password] || '', placeholder: 'Password'
+  = submit_tag "Sign In"
