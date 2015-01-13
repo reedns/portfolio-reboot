@@ -7,6 +7,9 @@
         = project.name
       .card-copy
         %p= project.description
+        = link_to 'Delete', project, method: :delete, data: 'Are you sure?' if admin_signed_in?
+        |
+        = link_to 'Edit', edit_project_path(project) if admin_signed_in?
       .card-stats
         %ul
           - project.tech_array.each do |tech|

@@ -12,7 +12,7 @@ class CreatingAProjectTest < ActionDispatch::IntegrationTest
     fill_in 'Project description', with: 'I made a project that is fun!'
 
     assert_difference('Project.count') do
-      click_button 'Create Project'
+      click_button 'Create'
     end
 
     click_link 'Sign Out'
