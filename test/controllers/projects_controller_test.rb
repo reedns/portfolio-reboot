@@ -10,12 +10,16 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test '#new' do
+    set_admin
+
     get :new
     assert_response :success
     assert assigns(:project)
   end
 
-  test 'valid #create' do
+  test 'valid and authenticated #create' do
+    set_admin
+
     assert_difference('Project.count') do
       post :create,  project: attributes_for(:project)
     end
@@ -24,7 +28,9 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_equal 'Success! New project created.', flash[:notice]
   end
 
-  test 'invalid #create' do
+  test 'invalid and authenticated #create' do
+    set_admin
+
     assert_no_difference('Project.count') do
       post :create, project: attributes_for(:invalid_project)
     end
@@ -33,8 +39,16 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_equal 'Oops! Please fix the errors below.', flash[:error]
   end
 
+  test 'unauthenticated #create' do
+    assert_no_difference('Project.count') do
+      post :create, project: attributes_for(:project)
+    end
+    assert_equal 'You must be an admin to do that.', flash[:error]
+  end
+
   test '#edit' do
     project = create(:project)
+    set_admin
 
     get :edit, id: project.id
     assert_response :success
@@ -43,6 +57,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'valid #update' do
     project = create(:project)
+    set_admin
 
     patch :update, id: project.id, project: { name: 'Best Project', tech: 'Rails'}
     assert_equal 'Best Project', project.reload.name
@@ -53,6 +68,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'invalid #update' do
     project = create(:project)
+    set_admin
 
     patch :update, id: project.id, project: { name: nil}
     assert_equal project.name, project.reload.name
@@ -62,6 +78,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test '#destroy' do
     project = create(:project)
+    set_admin
 
     assert_difference('Project.count', difference = -1) do
       delete :destroy, id: project.id

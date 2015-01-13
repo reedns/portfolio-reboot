@@ -32,6 +32,12 @@
         /           %a{:href => "javascript:void(0)"} Sub-submenu
         /         %li
         /           %a{:href => "javascript:void(0)"} An Item
+        - if !admin_signed_in?
+          %li.nav-link
+            %a.scroll-on-page-link.sign-in= link_to "Sign In", sign_in_path
+        - else
+          %li.nav-link
+            %a.scroll-on-page-link.sign-in= link_to "Sign Out", sign_out_path, method: :delete
     / .navigation-tools
     /   .search-bar
     /     .search-and-submit

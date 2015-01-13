@@ -1,13 +1,18 @@
 require 'test_helper'
 
 class AdminLoginTest < ActionDispatch::IntegrationTest
-  test 'admin logs in' do
+  setup do
     jimbo = create(:admin)
-    visit(root_path)
-    click_link('Sign in')
-    fill_in 'Username', with: jimbo.username
-    fill_in 'Password', with: jimbo.password
-    click_button('Sign In')
+    admin_sign_in(jimbo)
+  end
+
+  test 'admin logs in' do
     assert page.has_content?('Success! You are signed in.')
+    click_link 'Sign Out'
+  end
+
+  test 'admin signs out' do
+    click_link 'Sign Out'
+    assert page.has_content?('Success! You are signed out.')
   end
 end

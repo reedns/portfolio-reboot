@@ -133,11 +133,14 @@ header.navigation {
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
-      }
+        }
 
       &:hover {
         color: $navigation-color-hover;
       }
+    }
+    .sign-in {
+      float: right;
     }
   }
 
