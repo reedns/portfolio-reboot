@@ -17,4 +17,5 @@
               = link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?'}, class: 'action'
             %li
               = link_to 'Edit', edit_project_path(project), class: 'action'
-= link_to "New Project", new_project_path if admin_signed_in?
+
+= link_to "New Project", new_project_path, class: 'new-project' if admin_signed_in?

@@ -163,3 +163,8 @@
     }
   }
 }
+
+.new-project {
+  @extend %button;
+  margin-left: 1em;
+}
