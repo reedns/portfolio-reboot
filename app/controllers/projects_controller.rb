@@ -10,11 +10,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(project_params)
-    if project.save
+    @project = Project.create(project_params)
+    if @project.save
       redirect_to projects_path, notice: 'Success! New project created.'
     else
-      @project = Project.new
       flash.now[:error] = 'Oops! Please fix the errors below.'
       render :new
     end
@@ -25,12 +24,11 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    project = Project.find(params[:id])
-    if project.update(project_params)
+    @project = Project.find(params[:id])
+    if @project.update(project_params)
       redirect_to projects_path, notice: 'Success! Project updated.'
     else
       flash.now[:error] = 'Oops! Please fix the errors below.'
-      @project = project
       render :edit
     end
   end
