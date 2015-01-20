@@ -5,4 +5,3 @@ class Project < ActiveRecord::Base
     tech.nil? ? [] : tech.split(/,/).map { |e| e.delete(',').strip }
   end
 end
-

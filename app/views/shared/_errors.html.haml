@@ -1,0 +1,6 @@
+- if object.errors.any?
+  %div.flash-error
+    %h5 Please fix these errors:
+    - object.errors.full_messages.each do |msg|
+      %ul
+        %li= msg

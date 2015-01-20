@@ -1,9 +1,5 @@
-- if @project.errors.any?
-  %div.flash-error
-    %h5 There were some errros:
-    - @project.errors.full_messages.each do |msg|
-      %ul
-        %li= msg
+= render 'shared/errors', object: @project
+
 = form_for(@project) do |f|
   = f.text_field :name, placeholder: 'Project name'
   = f.text_field :tech, placeholder: 'Technologies used'

@@ -1,0 +1,9 @@
+%h2 Contact Reed
+
+= render 'shared/errors', object: @contact
+
+= form_for @contact do |f|
+  = f.text_field :name, placeholder: 'Name'
+  = f.email_field :email, placeholder: 'Email'
+  = f.text_area :body, placeholder: 'Message', size: '60x12'
+  = f.submit 'Send Message'

@@ -9,6 +9,6 @@ class VisitFrontPageTest < ActionDispatch::IntegrationTest
     assert_equal page.current_path, projects_path
 
     click_link('About')
-    assert page.current_path, root_path
+    assert_equal page.current_path, root_path
   end
 end
