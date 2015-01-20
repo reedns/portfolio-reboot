@@ -16,6 +16,6 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, username: @sally.username, password: 'password'
     assert_template :new
     assert_not_equal @sally.id, session[:admin_id]
-    assert_equal 'Oops! Please fix the errors below.', flash[:error]
+    assert_equal 'Oops! Looks like your username or password were incorrect.', flash[:error]
   end
 end

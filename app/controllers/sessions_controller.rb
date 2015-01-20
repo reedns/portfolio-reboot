@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:admin_id] = admin.id
       redirect_to root_path, notice: 'Success! You are signed in.'
     else
-      flash.now[:error] = 'Oops! Please fix the errors below.'
+      flash.now[:error] = 'Oops! Looks like your username or password were incorrect.'
       render :new
     end
   end

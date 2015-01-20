@@ -15,6 +15,7 @@ gem 'bitters'
 gem 'haml-rails'
 gem 'faker'
 gem 'bcrypt', '~> 3.1.7'
+gem 'foreman'
 
 group :development do
   gem 'spring'
@@ -22,6 +23,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 group :test, :development do

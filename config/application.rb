@@ -12,7 +12,6 @@ module ReedPortfolio
       c.stylesheets false
       c.javascripts false
       c.helper false
-      c.test_framework false
     end
   end
 end
