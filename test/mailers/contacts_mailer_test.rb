@@ -7,7 +7,7 @@ class ContactsMailerTest < ActionMailer::TestCase
 
     assert_not ActionMailer::Base.deliveries.empty?
     assert_equal [contact.email], email.from
-    assert_equal ['reedness3000@gmail.com'], email.to
+    assert_equal [ENV['CONTACT_EMAIL']], email.to
     assert_equal 'Someone has contacted you!', email.subject
   end
 end

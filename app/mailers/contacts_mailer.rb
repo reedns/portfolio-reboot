@@ -4,7 +4,7 @@ class ContactsMailer < ApplicationMailer
 
     mail(
       from: @contact.email,
-      to: 'reedness3000@gmail.com',
+      to: ENV['CONTACT_EMAIL'],
       subject: 'Someone has contacted you!'
     )
   end
