@@ -25,5 +25,4 @@ FactoryGirl.define do
     url 'google.com'
     tech { Faker::Lorem.words(2).join }
   end
-
 end

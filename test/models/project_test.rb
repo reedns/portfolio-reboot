@@ -12,13 +12,14 @@ class ProjectTest < ActiveSupport::TestCase
     assert_equal ['JavaScript', 'Ruby on Rails', 'CSS'], project.tech_array
   end
 
-  test '#make_url should return a complet url' do
+  test '#make_url should return a complete url' do
     project = create(:broken_url)
     project2 = create(:broken_url2)
     project3 = create(:project)
+    url = project3.url
 
     assert_equal 'http://www.google.com', project.make_url
     assert_equal 'http://www.google.com', project2.make_url
-    assert project.make_url.include?('http://')
+    assert_equal project3.make_url, url
   end
 end
