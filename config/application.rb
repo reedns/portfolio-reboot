@@ -13,5 +13,7 @@ module ReedPortfolio
       c.javascripts false
       c.helper false
     end
+
+    config.active_job.queue_adapter = :sucker_punch
   end
 end

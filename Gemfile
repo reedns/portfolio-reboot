@@ -16,6 +16,7 @@ gem 'haml-rails'
 gem 'faker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'foreman'
+gem 'sucker_punch'
 
 group :development do
   gem 'spring'

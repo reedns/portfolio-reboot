@@ -5,9 +5,7 @@ class ContactsMailer < ApplicationMailer
     mail(
       from: @contact.email,
       to: 'reedness3000@gmail.com',
-      subject: 'Someone has contacted you!',
-      template_path: 'contacts_mailer',
-      template_name: 'contact_email.html.haml'
+      subject: 'Someone has contacted you!'
     )
   end
 end
