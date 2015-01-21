@@ -12,14 +12,14 @@ FactoryGirl.define do
     url { Faker::Internet.url }
   end
 
-  factory :broken_url, class: :project do
+  factory :no_http_project, class: :project do
     name { Faker::Lorem.words(1).join }
     description { Faker::Lorem.words(10).join }
     url 'www.google.com'
     tech { Faker::Lorem.words(2).join }
   end
 
-  factory :broken_url2, class: :project do
+  factory :no_www_project, class: :project do
     name { Faker::Lorem.words(1).join }
     description { Faker::Lorem.words(10).join }
     url 'google.com'

@@ -7,6 +7,7 @@
         = project.name
       .card-copy
         %p= project.description
+        %p= link_to "#{project.url}", project.complete_url
       .card-stats
         %ul
           - project.tech_array.each do |tech|
