@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  validates :name, :description, :tech, :url, presence: true
+  validates :name, :description, :tech, :url, :image, presence: true
 
   mount_uploader :image, ProjectImageUploader
 

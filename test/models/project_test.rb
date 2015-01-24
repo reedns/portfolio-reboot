@@ -7,8 +7,13 @@ class ProjectTest < ActiveSupport::TestCase
   end
 
   test '#tech_array should convert tech to array' do
-    project = Project.create!(name: 'new', description: 'cool', url: 'test.com',
-                              tech: 'JavaScript, Ruby on Rails, CSS')
+    project = Project.create(
+                              name: 'new',
+                              description: 'cool', 
+                              url: 'test.com',
+                              tech: 'JavaScript, Ruby on Rails, CSS',
+                              image: 'image'
+                            )
     assert_equal ['JavaScript', 'Ruby on Rails', 'CSS'], project.tech_array
   end
 

@@ -87,8 +87,3 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_equal 'Success! Project deleted.', flash[:notice]
   end
 end
-
-
-
-
-

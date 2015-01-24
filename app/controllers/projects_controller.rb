@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.create(project_params)
+
     if @project.save
       redirect_to projects_path, notice: 'Success! New project created.'
     else
