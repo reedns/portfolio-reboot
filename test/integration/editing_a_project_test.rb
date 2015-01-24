@@ -2,6 +2,7 @@ require 'test_helper'
 
 class EditingAProjectTest < ActionDispatch::IntegrationTest
  test 'admin can delete a project' do
+    project = create(:project)
     mary = create(:admin)
     admin_sign_in(mary)
 
