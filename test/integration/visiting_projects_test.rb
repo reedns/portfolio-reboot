@@ -2,7 +2,7 @@ require 'test_helper'
 
 class VisitingProjectsTest < ActionDispatch::IntegrationTest
   test 'visiting the projects index page' do
-    project = create(:no_http_project)
+    project = create(:project)
 
     visit root_path
 

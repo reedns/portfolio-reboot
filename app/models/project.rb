@@ -1,6 +1,8 @@
 class Project < ActiveRecord::Base
   validates :name, :description, :tech, :url, presence: true
 
+  mount_uploader :image, ProjectImageUploader
+
   def tech_array
     tech.nil? ? [] : tech.split(/,/).map { |e| e.delete(',').strip }
   end

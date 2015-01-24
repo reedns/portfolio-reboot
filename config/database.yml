@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: gem_store_rails_development
+  database: reed_portfolio_development
   pool: 5
   username: reedns
   password:
@@ -9,6 +9,6 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: gem_store_rails_development
+  database: reed_portfolio_development
   pool: 5
   username: reedns

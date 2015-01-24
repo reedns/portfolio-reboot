@@ -16,6 +16,9 @@ gem 'haml-rails'
 gem 'faker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'sucker_punch'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog', require: "fog/aws/storage"
 
 group :development do
   gem 'spring'

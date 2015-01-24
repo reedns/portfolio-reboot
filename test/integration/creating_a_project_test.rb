@@ -10,12 +10,13 @@ class CreatingAProjectTest < ActionDispatch::IntegrationTest
     fill_in 'Technologies used', with: 'Rails'
     fill_in 'Project URL', with: 'www.project.com'
     fill_in 'Project description', with: 'I made a project that is fun!'
+    attach_file 'Project image', 'test/support/image.jpg'
 
     assert_difference('Project.count') do
       click_button 'Create'
     end
 
-    click_link 'Sign Out'
+    click_link('Sign Out')
   end
 
   test 'only the admin can see link to create a new project' do
