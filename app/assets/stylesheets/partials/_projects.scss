@@ -40,10 +40,11 @@
   padding-bottom: $card-padding-for-absolute-stats;
   position: relative;
   position: relative;
+  max-width: 330px;
 
   .card-image {
     overflow: hidden;
-    max-height: 150px;
+    max-height: 200px;
 
     img {
       @include transition (all 0.2s ease-in-out);

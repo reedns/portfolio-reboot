@@ -2,7 +2,7 @@
   - @projects.each do |project|
     .card
       .card-image
-        %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"}/
+        %img{:alt => "", :src => "#{project.image}"}/
       .card-header
         = project.name
       .card-copy
