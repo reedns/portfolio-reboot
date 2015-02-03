@@ -1,4 +1,5 @@
 - flash.each do |name, msg|
-  %div(class="flash-#{name}")
-    / %a.close(data-dismiss='alert') &#215;
-    %span= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+  -if msg.is_a?(String)
+    %div(class="flash-#{name}")
+      = msg
+      = link_to 'Ok.', id:'close-flash'

@@ -39,7 +39,7 @@ header.navigation {
     position: relative;
     z-index: 9999;
     margin: 0;
-    margin-left: 3em;
+    margin-left: 7em;
   }
 
   .logo {
@@ -268,89 +268,89 @@ header.navigation {
 
   // Elements on the far right
 
-  .navigation-tools {
-    background: #505050;
-    clear: both;
-    display: block;
-    height: $navigation-height;
-    padding-left: $navigation-padding/2;
-    padding-right: $navigation-padding;
-
-    @include media($large-screen) {
-      background: transparent;
-      clear: none;
-      float: right;
-    }
-  }
-
-  .sign-up {
-    @include button(flat, $base-accent-color);
-    display: inline;
-    float: right;
-    font-size: .8em;
-    margin-top: 1em;
-    padding: .75em 1em;
-    text-transform: uppercase;
-  }
-
-  // Search bar
-
-  .search-bar {
-    $search-bar-border-color: $base-border-color;
-    $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10);
-
-    float: left;
-    padding: .85em .6em .7em .6em;
-    width: 60%;
-
-    .search-and-submit {
-      position: relative;
-
-      input[type=search] {
-        @include box-sizing(border-box);
-        background: $navigation-search-background;
-        border-radius: $base-border-radius * 2;
-        border: $navigation-search-border;
-        color: $navigation-color;
-        font-size: .9em;
-        font-style: italic;
-        margin: 0;
-        padding: .5em .8em;
-        width: 100%;
-
-        @include media($large-screen) {
-          width: 100%;
-        }
-      }
-
-      button[type=submit] {
-        @include button(flat, $navigation-search-background);
-        bottom: 0.3em;
-        left: auto;
-        outline: none;
-        padding: 0 9px;
-        position: absolute;
-        right: 0.3em;
-        top: 0.3em;
-
-        img {
-          height: 12px;
-          opacity: .7;
-          padding: 1px;
-        }
-      }
-    }
-
-    @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: relative;
-      width: 16em;
-
-      input {
-        @include box-sizing(border-box);
-        display: block;
-      }
-    }
-  }
+//   .navigation-tools {
+//     background: #505050;
+//     clear: both;
+//     display: block;
+//     height: $navigation-height;
+//     padding-left: $navigation-padding/2;
+//     padding-right: $navigation-padding;
+//
+//     @include media($large-screen) {
+//       background: transparent;
+//       clear: none;
+//       float: right;
+//     }
+//   }
+//
+//   .sign-up {
+//     @include button(flat, $base-accent-color);
+//     display: inline;
+//     float: right;
+//     font-size: .8em;
+//     margin-top: 1em;
+//     padding: .75em 1em;
+//     text-transform: uppercase;
+//   }
+//
+//   // Search bar
+//
+//   .search-bar {
+//     $search-bar-border-color: $base-border-color;
+//     $search-bar-border: 1px solid $search-bar-border-color;
+//     $search-bar-background: lighten($search-bar-border-color, 10);
+//
+//     float: left;
+//     padding: .85em .6em .7em .6em;
+//     width: 60%;
+//
+//     .search-and-submit {
+//       position: relative;
+//
+//       input[type=search] {
+//         @include box-sizing(border-box);
+//         background: $navigation-search-background;
+//         border-radius: $base-border-radius * 2;
+//         border: $navigation-search-border;
+//         color: $navigation-color;
+//         font-size: .9em;
+//         font-style: italic;
+//         margin: 0;
+//         padding: .5em .8em;
+//         width: 100%;
+//
+//         @include media($large-screen) {
+//           width: 100%;
+//         }
+//       }
+//
+//       button[type=submit] {
+//         @include button(flat, $navigation-search-background);
+//         bottom: 0.3em;
+//         left: auto;
+//         outline: none;
+//         padding: 0 9px;
+//         position: absolute;
+//         right: 0.3em;
+//         top: 0.3em;
+//
+//         img {
+//           height: 12px;
+//           opacity: .7;
+//           padding: 1px;
+//         }
+//       }
+//     }
+//
+//     @include media($horizontal-bar-mode) {
+//       display: inline-block;
+//       position: relative;
+//       width: 16em;
+//
+//       input {
+//         @include box-sizing(border-box);
+//         display: block;
+//       }
+//     }
+//   }
 }

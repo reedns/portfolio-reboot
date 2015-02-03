@@ -19,6 +19,7 @@ gem 'sucker_punch'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog', require: "fog/aws/storage"
+gem 'jquery-turbolinks'
 
 group :development do
   gem 'spring'
